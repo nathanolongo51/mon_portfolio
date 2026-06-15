@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Miangu - Designer & Développeur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <img src="assets/img/mon_logo.png" alt="mon logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#works">Réalisations</a></li>
+      <li><a href="#tools">Outils</a></li>
+      <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">À propos</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#works" class="mobile-link">Réalisations</a></li>
+      <li><a href="#tools" class="mobile-link">Outils</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Designer · Développeur</p>
+      <h1 class="hero-name">
+        <span class="name-line">Jonathan</span>
+        <span class="name-line">Miangu</span>
+        <span class="name-line name-accent">Olongo</span>
+      </h1>
+      <p class="hero-tagline">Je crée des visuels qui frappent<br>et des applications qui fonctionnent.</p>
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">Voir mes travaux</a>
+        <a href="#contact" class="btn btn-ghost">Travailler ensemble</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="poster-stack">
+          <div class="poster p1">
+            <div class="poster-inner">
+              <span class="poster-label">DESIGN</span>
+              <div class="poster-shape s1"></div>
+              <div class="poster-shape s2"></div>
+            </div>
+          </div>
+          <div class="poster p2">
+            <div class="poster-inner">
+              <span class="poster-label">MOBILE</span>
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="phone-bar"></div>
+                  <div class="phone-bar short"></div>
+                  <div class="phone-bar shorter"></div>
+                  <div class="phone-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster p3">
+            <div class="poster-inner">
+              <span class="poster-label">WEB</span>
+              <div class="code-lines">
+                <div class="code-line"></div>
+                <div class="code-line short"></div>
+                <div class="code-line medium"></div>
+                <div class="code-line short"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-badge"s>
+          <span class="badge-num">3</span>
+          <span class="badge-text">expertises</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-wrap">
+        <div class="about-photo-area">
+          <div class="photo-frame">
+            <!-- Remplace ce bloc par une vraie <img src="..."> -->
+            <div class="photo-placeholder">
+              <img src="assets/img/moi.png" alt="ma photo">
+            </div>
+          </div>
+          <div class="about-numbers">
+            <div class="number-item">
+              <strong>Design</strong>
+              <span>Affiches &amp; Identités visuelles</span>
+            </div>
+            <div class="divider-v"></div>
+            <div class="number-item">
+              <strong>Dev</strong>
+              <span>Mobile &amp; Web</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="section-eyebrow">Qui suis-je ?</p>
+          <h2 class="section-title">Le design,<br>c'est ma langue.<br><span class="accent">Le code, mon outil.</span></h2>
+          <p class="about-text">Je m'appelle <strong>Jonathan Miangu Olongo</strong>. Je suis designer graphique et développeur. Deux métiers que je pratique ensemble, pas séparément.</p>
+          <p class="about-text">Je conçois des affiches, des identités visuelles et des supports de communication qui marquent les esprits. Et je développe des applications mobiles et des sites web qui transforment ces designs en expériences réelles, sur écran.</p>
+          <p class="about-text">Du concept à la livraison, je couvre tout le chemin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="container">
+      <p class="section-eyebrow center">Ce que je fais</p>
+      <h2 class="section-title center">Mes <span class="accent">Services</span></h2>
+      <div class="services-list">
+
+        <div class="service-item">
+          <div class="service-num">01</div>
+          <div class="service-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="1"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <h3>Création d'Affiches</h3>
+            <p>Affiches événementielles, publicitaires, religieuses, culturelles. Des visuels pensés pour capter l'attention et faire passer le bon message.</p>
+            <ul class="service-details">
+              <li>Affiches de concerts &amp; événements</li>
+              <li>Flyers &amp; supports imprimés</li>
+              <li>Visuels réseaux sociaux</li>
+              <li>Bannières &amp; publicités digitales</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-num">02</div>
+          <div class="service-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                <line x1="12" y1="18" x2="12" y2="18.01"/>
+              </svg>
+            </div>
+            <h3>Développement Mobile</h3>
+            <p>Applications Android et cross-platform avec Kotlin et Flutter. Des apps fluides, bien designées, prêtes pour le Play Store.</p>
+            <ul class="service-details">
+              <li>Apps Android natives (Kotlin)</li>
+              <li>Apps cross-platform (Flutter)</li>
+              <li>UI mobile soignée</li>
+              <li>Publication Play Store</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-num">03</div>
+          <div class="service-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3>Développement Web</h3>
+            <p>Sites vitrines, landing pages et applications web. Du HTML/CSS propre au backend Node.js robuste.</p>
+            <ul class="service-details">
+              <li>Sites vitrines &amp; landing pages</li>
+              <li>Intégration HTML / CSS / JS</li>
+              <li>Backend Node.js &amp; APIs</li>
+              <li>Sites responsive &amp; optimisés</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS / PROJECTS -->
+  <section class="section works" id="works">
+    <div class="container">
+      <p class="section-eyebrow center">Portfolio</p>
+      <h2 class="section-title center">Mes <span class="accent">Réalisations</span></h2>
+
+      <div class="works-filter">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+
+      <div class="works-grid">
+
+        <div class="work-card" data-cat="design">
+          <div class="work-img">
+            <!-- Remplace le src par ton image : src="assets/img/projet1.jpg" -->
+            <img src="assets/img/epe.jpg" alt="Affiche Événementielle" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback">
+              <span>Ajoute ton image ici<br><code>assets/img/projet1.jpg</code></span>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-cat">Affiche</span>
+            <h3>Affiche Événementielle</h3>
+            <p>Visuel complet pour un événement.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-cat="mobile">
+          <div class="work-img">
+            <img src="assets/img/eterna.png" alt="App Android Flutter" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback">
+              <span>Ajoute ton image ici<br><code>assets/img/projet2.jpg</code></span>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-cat">Application Desktop-Mobile</span>
+            <h3>App Flutter (Desktop, Android & Ios)</h3>
+            <p>Application mobile cross-platform avec une interface soignée et des fonctionnalités complètes.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-cat="web">
+          <div class="work-img">
+            <img src="assets/img/eterna_2.png" alt="Site Vitrine" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback">
+              <span>Ajoute ton image ici<br><code>assets/img/projet3.jpg</code></span>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-cat">Site Web</span>
+            <h3>Site Vitrine Professionnel</h3>
+            <p>Landing page complète avec design responsive, animations et formulaire de contact intégré.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-cat="design">
+          <div class="work-img">
+            <img src="assets/img/telecharger.jpg" alt="Branding Complet" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback">
+              <span>Ajoute ton image ici<br><code>assets/img/projet4.jpg</code></span>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-cat">Identité Visuelle</span>
+            <h3>Branding Complet</h3>
+            <p>Logo, charte graphique, déclinaisons print et digital pour une marque ou organisation.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-cat="mobile">
+          <div class="work-img">
+            <img src="assets/img/Screenshot_2025.jpeg" alt="App Kotlin Android" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback">
+              <span>Ajoute ton image ici<br><code>assets/img/projet5.jpg</code></span>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-cat">Application Mobile</span>
+            <h3>App Kotlin — Android</h3>
+            <p>Application native Android développée en Kotlin avec Material Design et performance optimisée.</p>
+          </div>
+        </div>
+
+<div class="work-card" data-cat="web">
+  <div class="work-img">
+    <img src="assets/img/Capture.png" alt="Site Web Église" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+    <div class="work-img-fallback">
+      <span>Ajoute ton image ici<br><code>assets/img/projet7.jpg</code></span>
+    </div>
+  </div>
+  <div class="work-info">
+    <span class="work-cat">Site Web</span>
+    <h3>Site Web Paroisse &amp; Communauté</h3>
+    <p>Plateforme complète avec diffusion des cultes en direct, calendrier des événements, gestion des dons et blog communautaire.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TOOLS -->
+  <section class="section tools" id="tools">
+    <div class="container">
+      <p class="section-eyebrow center">Ma boîte à outils</p>
+      <h2 class="section-title center">Outils <span class="accent">&amp;</span> Technologies</h2>
+      <div class="tools-grid">
+
+        <div class="tool-group">
+          <h4 class="tool-group-title">Design</h4>
+          <div class="tool-items">
+            <div class="tool-item">
+              <div class="tool-logo ps">Ps</div>
+              <span>Photoshop</span>
+            </div>
+            <div class="tool-item">
+              <div class="tool-logo ai">Ai</div>
+              <span>Illustrator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <h4 class="tool-group-title">Mobile</h4>
+          <div class="tool-items">
+            <div class="tool-item">
+              <div class="tool-logo kt">Kt</div>
+              <span>Kotlin</span>
+            </div>
+            <div class="tool-item">
+              <div class="tool-logo fl">FL</div>
+              <span>Flutter</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <h4 class="tool-group-title">Web</h4>
+          <div class="tool-items">
+            <div class="tool-item">
+              <div class="tool-logo html">H5</div>
+              <span>HTML / CSS</span>
+            </div>
+            <div class="tool-item">
+              <div class="tool-logo js">JS</div>
+              <span>JavaScript</span>
+            </div>
+            <div class="tool-item">
+              <div class="tool-logo node">No</div>
+              <span>Node.js</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <p class="section-eyebrow">Discutons</p>
+          <h2 class="section-title">Vous avez un projet<span class="accent"> ?</span></h2>
+          <p class="contact-desc">Affiche, application mobile ou site web, je suis disponible pour en parler et vous proposer la meilleure approche.</p>
+          <div class="contact-info-list">
+            <a href="https://wa.me/243821462002" target="_blank" class="contact-info-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.858L.054 23.77a.5.5 0 00.617.617l5.898-1.476A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.513-5.228-1.406l-.375-.22-3.881.97.985-3.793-.236-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              </div>
+              <span>+243821462002</span>
+            </a>
+            <a href="mailto:natholongo51@gmail.com" class="contact-info-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <span>natholongo51@gmail.com</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label>Nom complet</label>
+              <input type="text" id="name" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label>Numero</label>
+              <input type="tel" id="c-tel" placeholder="+243 XXX XXX XXX" required>
+            </div>
+            <div class="form-group">
+              <label>Type de projet</label>
+              <select id="projectType">
+                <option value="">Choisir...</option>
+                <option value="Affiche / Design graphique">Affiche / Design graphique</option>
+                <option value="Application mobile">Application mobile</option>
+                <option value="Site web">Site web</option>
+                <option value="Identité visuelle">Identité visuelle</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="message" rows="4" placeholder="Décrivez votre projet..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full">Envoyer via WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">JMO<span class="dot">.</span></span>
+        <p>© 2025 Jonathan Miangu Olongo - Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
