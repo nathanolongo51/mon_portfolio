@@ -132,66 +132,37 @@
     <div class="container">
       <p class="section-eyebrow center">Ce que je fais</p>
       <h2 class="section-title center">Mes <span class="accent">Services</span></h2>
-      <div class="services-list">
 
-        <div class="service-item">
-          <div class="service-num">01</div>
-          <div class="service-body">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="1"/>
-                <path d="M3 9h18M9 21V9"/>
-              </svg>
-            </div>
-            <h3>Création d'Affiches</h3>
-            <p>Affiches événementielles, publicitaires, religieuses, culturelles. Des visuels pensés pour capter l'attention et faire passer le bon message.</p>
-            <ul class="service-details">
-              <li>Affiches de concerts &amp; événements</li>
-              <li>Flyers &amp; supports imprimés</li>
-              <li>Visuels réseaux sociaux</li>
-              <li>Bannières &amp; publicités digitales</li>
-            </ul>
-          </div>
+      <div class="services-columns">
+
+        <div class="service-col">
+          <span class="service-pill">Design Graphique</span>
+          <ul class="service-col-list">
+            <li>Affiches événementielles</li>
+            <li>Flyers &amp; supports imprimés</li>
+            <li>Identité visuelle &amp; logos</li>
+            <li>Visuels réseaux sociaux</li>
+          </ul>
         </div>
 
-        <div class="service-item">
-          <div class="service-num">02</div>
-          <div class="service-body">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="5" y="2" width="14" height="20" rx="2"/>
-                <line x1="12" y1="18" x2="12" y2="18.01"/>
-              </svg>
-            </div>
-            <h3>Développement Mobile</h3>
-            <p>Applications Android et cross-platform avec Kotlin et Flutter. Des apps fluides, bien designées, prêtes pour le Play Store.</p>
-            <ul class="service-details">
-              <li>Apps Android natives (Kotlin)</li>
-              <li>Apps cross-platform (Flutter)</li>
-              <li>UI mobile soignée</li>
-              <li>Publication Play Store</li>
-            </ul>
-          </div>
+        <div class="service-col">
+          <span class="service-pill">Développement Mobile</span>
+          <ul class="service-col-list">
+            <li>Apps Android natives (Kotlin)</li>
+            <li>Apps cross-platform (Flutter)</li>
+            <li>UI/UX mobile</li>
+            <li>Publication Play Store</li>
+          </ul>
         </div>
 
-        <div class="service-item">
-          <div class="service-num">03</div>
-          <div class="service-body">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <path d="M8 21h8M12 17v4"/>
-              </svg>
-            </div>
-            <h3>Développement Web</h3>
-            <p>Sites vitrines, landing pages et applications web. Du HTML/CSS propre au backend Node.js robuste.</p>
-            <ul class="service-details">
-              <li>Sites vitrines &amp; landing pages</li>
-              <li>Intégration HTML / CSS / JS</li>
-              <li>Backend Node.js &amp; APIs</li>
-              <li>Sites responsive &amp; optimisés</li>
-            </ul>
-          </div>
+        <div class="service-col">
+          <span class="service-pill">Développement Web</span>
+          <ul class="service-col-list">
+            <li>Sites vitrines &amp; landing pages</li>
+            <li>Intégration HTML / CSS / JS</li>
+            <li>Backend Node.js &amp; APIs</li>
+            <li>Sites responsive</li>
+          </ul>
         </div>
 
       </div>
@@ -204,104 +175,83 @@
       <p class="section-eyebrow center">Portfolio</p>
       <h2 class="section-title center">Mes <span class="accent">Réalisations</span></h2>
 
-      <div class="works-filter">
-        <button class="filter-btn active" data-filter="all">Tout</button>
-        <button class="filter-btn" data-filter="design">Design</button>
-        <button class="filter-btn" data-filter="mobile">Mobile</button>
-        <button class="filter-btn" data-filter="web">Web</button>
+      <!-- GROUPE PROJET 1 — Design graphique -->
+      <div class="work-group">
+        <h3 class="work-group-title">Design Graphique <span class="work-group-sub">: Affiches &amp; Visuels</span></h3>
+        <div class="work-group-grid">
+
+          <div class="work-mock">
+            <img src="assets/img/epe.jpg" alt="Affiche 1" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/design-1.jpg</code></span></div>
+          </div>
+          <div class="work-mock">
+            <img src="assets/img/234.jpg" alt="Affiche 2" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/design-2.jpg</code></span></div>
+          </div>
+          <div class="work-mock">
+            <img src="assets/img/laure.jpg" alt="Affiche 3" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/design-3.jpg</code></span></div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="works-grid">
+      <!-- GROUPE PROJET 2 — Mobile -->
+      <div class="work-group">
+        <h3 class="work-group-title">Application Mobile <span class="work-group-sub">: Flutter &amp; Kotlin</span></h3>
+        <div class="work-group-grid">
 
-        <div class="work-card" data-cat="design">
-          <div class="work-img">
-            <!-- Remplace le src par ton image : src="assets/img/projet1.jpg" -->
-            <img src="assets/img/epe.jpg" alt="Affiche Événementielle" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="work-img-fallback">
-              <span>Ajoute ton image ici<br><code>assets/img/projet1.jpg</code></span>
-            </div>
+          <div class="work-mock">
+            <img src="assets/img/eterna.png" alt="App mobile 1" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/mobile-1.jpg</code></span></div>
           </div>
-          <div class="work-info">
-            <span class="work-cat">Affiche</span>
-            <h3>Affiche Événementielle</h3>
-            <p>Visuel complet pour un événement.</p>
+          <div class="work-mock">
+            <img src="assets/img/eterna_2.png" alt="App mobile 2" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/mobile-2.jpg</code></span></div>
           </div>
+          <div class="work-mock">
+            <img src="assets/img/Screenshot_2025.jpeg" alt="App mobile 3" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/mobile-3.jpg</code></span></div>
+          </div>
+
         </div>
-
-        <div class="work-card" data-cat="mobile">
-          <div class="work-img">
-            <img src="assets/img/eterna.png" alt="App Android Flutter" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="work-img-fallback">
-              <span>Ajoute ton image ici<br><code>assets/img/projet2.jpg</code></span>
-            </div>
-          </div>
-          <div class="work-info">
-            <span class="work-cat">Application Desktop-Mobile</span>
-            <h3>App Flutter (Desktop, Android & Ios)</h3>
-            <p>Application mobile cross-platform avec une interface soignée et des fonctionnalités complètes.</p>
-          </div>
-        </div>
-
-        <div class="work-card" data-cat="web">
-          <div class="work-img">
-            <img src="assets/img/eterna_2.png" alt="Site Vitrine" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="work-img-fallback">
-              <span>Ajoute ton image ici<br><code>assets/img/projet3.jpg</code></span>
-            </div>
-          </div>
-          <div class="work-info">
-            <span class="work-cat">Site Web</span>
-            <h3>Site Vitrine Professionnel</h3>
-            <p>Landing page complète avec design responsive, animations et formulaire de contact intégré.</p>
-          </div>
-        </div>
-
-        <div class="work-card" data-cat="design">
-          <div class="work-img">
-            <img src="assets/img/telecharger.jpg" alt="Branding Complet" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="work-img-fallback">
-              <span>Ajoute ton image ici<br><code>assets/img/projet4.jpg</code></span>
-            </div>
-          </div>
-          <div class="work-info">
-            <span class="work-cat">Identité Visuelle</span>
-            <h3>Branding Complet</h3>
-            <p>Logo, charte graphique, déclinaisons print et digital pour une marque ou organisation.</p>
-          </div>
-        </div>
-
-        <div class="work-card" data-cat="mobile">
-          <div class="work-img">
-            <img src="assets/img/Screenshot_2025.jpeg" alt="App Kotlin Android" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="work-img-fallback">
-              <span>Ajoute ton image ici<br><code>assets/img/projet5.jpg</code></span>
-            </div>
-          </div>
-          <div class="work-info">
-            <span class="work-cat">Application Mobile</span>
-            <h3>App Kotlin — Android</h3>
-            <p>Application native Android développée en Kotlin avec Material Design et performance optimisée.</p>
-          </div>
-        </div>
-
-<div class="work-card" data-cat="web">
-  <div class="work-img">
-    <img src="assets/img/Capture.png" alt="Site Web Église" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-    <div class="work-img-fallback">
-      <span>Ajoute ton image ici<br><code>assets/img/projet7.jpg</code></span>
-    </div>
-  </div>
-  <div class="work-info">
-    <span class="work-cat">Site Web</span>
-    <h3>Site Web Paroisse &amp; Communauté</h3>
-    <p>Plateforme complète avec diffusion des cultes en direct, calendrier des événements, gestion des dons et blog communautaire.</p>
-  </div>
-</div>
-
       </div>
+
+      <!-- GROUPE PROJET 3 — Web -->
+      <div class="work-group">
+        <h3 class="work-group-title">Développement Web <span class="work-group-sub">: Sites &amp; Dashboards</span></h3>
+        <div class="work-group-grid">
+
+          <div class="work-mock">
+            <img src="assets/img/Capture.png" alt="Site web 1" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/web-1.jpg</code></span></div>
+          </div>
+          <div class="work-mock">
+            <img src="assets/img/Capture2.png" alt="Site web 2" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/web-2.jpg</code></span></div>
+          </div>
+          <div class="work-mock">
+            <img src="assets/img/eterna_3.png" alt="Site web 3" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/web-3.jpg</code></span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- LOGOS CLIENTS -->
+      <div class="work-group logos-group">
+        <h3 class="work-group-title">Logos <span class="work-group-sub">&amp; Identités visuelles</span></h3>
+        <div class="logos-grid">
+          <div class="logo-tile"><img src="assets/img/newlogo.png" alt="Logo client 1" onerror="this.parentElement.classList.add('empty')" /></div>
+          <div class="logo-tile"><img src="assets/img/lga.png" alt="Logo client 2" onerror="this.parentElement.classList.add('empty')" /></div>
+          <div class="logo-tile"><img src="assets/img/pesa_esengo.jpg" alt="Logo client 3" onerror="this.parentElement.classList.add('empty')" /></div>
+          <div class="logo-tile"><img src="assets/img/logo_media.png" alt="Logo client 4" onerror="this.parentElement.classList.add('empty')" /></div>
+        </div>
+        
+      </div>
+
     </div>
   </section>
-
 
   <!-- TOOLS -->
   <section class="section tools" id="tools">
@@ -359,6 +309,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- CONTACT -->
   <section class="section contact" id="contact">
