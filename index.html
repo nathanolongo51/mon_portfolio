@@ -180,15 +180,15 @@
         <h3 class="work-group-title">Design Graphique <span class="work-group-sub">: Affiches &amp; Visuels</span></h3>
         <div class="work-group-grid">
 
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/epe.jpg" alt="Affiche 1" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/design-1.jpg</code></span></div>
           </div>
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/234.jpg" alt="Affiche 2" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/design-2.jpg</code></span></div>
           </div>
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/laure.jpg" alt="Affiche 3" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/design-3.jpg</code></span></div>
           </div>
@@ -201,15 +201,15 @@
         <h3 class="work-group-title">Application Mobile <span class="work-group-sub">: Flutter &amp; Kotlin</span></h3>
         <div class="work-group-grid">
 
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/eterna.png" alt="App mobile 1" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/mobile-1.jpg</code></span></div>
           </div>
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/eterna_2.png" alt="App mobile 2" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/mobile-2.jpg</code></span></div>
           </div>
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/Screenshot_2025.jpeg" alt="App mobile 3" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/mobile-3.jpg</code></span></div>
           </div>
@@ -222,15 +222,15 @@
         <h3 class="work-group-title">Développement Web <span class="work-group-sub">: Sites &amp; Dashboards</span></h3>
         <div class="work-group-grid">
 
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/Capture.png" alt="Site web 1" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/web-1.jpg</code></span></div>
           </div>
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/Capture2.png" alt="Site web 2" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/web-2.jpg</code></span></div>
           </div>
-          <div class="work-mock">
+          <div class="work-mock" data-lightbox>
             <img src="assets/img/eterna_3.png" alt="Site web 3" class="work-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="work-img-fallback"><span>Ajoute ton image<br><code>assets/img/web-3.jpg</code></span></div>
           </div>
@@ -365,6 +365,17 @@
       </div>
     </div>
   </section>
+
+<!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Image précédente">&#8249;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg" />
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Image suivante">&#8250;</button>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">

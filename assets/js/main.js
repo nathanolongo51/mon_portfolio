@@ -130,3 +130,90 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+/* ============================================
+   LIGHTBOX — visualisation des réalisations
+============================================ */
+(() => {
+  const lightbox      = document.getElementById('lightbox');
+  const lightboxImg    = document.getElementById('lightboxImg');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const btnClose       = document.getElementById('lightboxClose');
+  const btnPrev         = document.getElementById('lightboxPrev');
+  const btnNext         = document.getElementById('lightboxNext');
+
+  if (!lightbox) return;
+
+  let currentGroup = [];
+  let currentIndex = 0;
+
+  function getGroupImages(groupEl) {
+    // Ne garde que les work-mock dont l'image a bien chargé (pas de fallback affiché)
+    return Array.from(groupEl.querySelectorAll('.work-mock')).filter(mock => {
+      const img = mock.querySelector('.work-photo');
+      return img && img.style.display !== 'none';
+    });
+  }
+
+  function openLightbox(mockEl) {
+    const groupEl = mockEl.closest('.work-group-grid');
+    currentGroup = groupEl ? getGroupImages(groupEl) : [mockEl];
+    currentIndex = currentGroup.indexOf(mockEl);
+    if (currentIndex === -1) currentIndex = 0;
+    renderLightbox();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function renderLightbox() {
+    const mock = currentGroup[currentIndex];
+    if (!mock) return;
+    const img = mock.querySelector('.work-photo');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+    const showNav = currentGroup.length > 1;
+    btnPrev.style.display = showNav ? 'flex' : 'none';
+    btnNext.style.display = showNav ? 'flex' : 'none';
+    lightboxCounter.textContent = showNav
+      ? `${currentIndex + 1} / ${currentGroup.length}`
+      : '';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function showPrev() {
+    if (!currentGroup.length) return;
+    currentIndex = (currentIndex - 1 + currentGroup.length) % currentGroup.length;
+    renderLightbox();
+  }
+
+  function showNext() {
+    if (!currentGroup.length) return;
+    currentIndex = (currentIndex + 1) % currentGroup.length;
+    renderLightbox();
+  }
+
+  document.querySelectorAll('.work-mock[data-lightbox]').forEach(mock => {
+    mock.addEventListener('click', () => openLightbox(mock));
+  });
+
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', showPrev);
+  btnNext.addEventListener('click', showNext);
+
+  // Clic sur le fond sombre (hors image) ferme la lightbox
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Navigation clavier
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+})();
