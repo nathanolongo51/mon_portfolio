@@ -161,6 +161,19 @@ if (form) {
   });
 }
 
+  // ---- Bouton retour en haut ----------------------------------
+const btnTop = document.getElementById('btn-top');
+if (btnTop) {
+  window.addEventListener('scroll', () => {
+    btnTop.classList.toggle('visible', window.scrollY > 100);
+  });
+
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+
 /* ============================================
    SMOOTH SCROLL
 ============================================ */
