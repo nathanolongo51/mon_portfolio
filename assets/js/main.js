@@ -100,21 +100,61 @@ filterBtns.forEach(btn => {
    CONTACT FORM — WhatsApp
 ============================================ */
 const form = document.getElementById('contactForm');
+
 if (form) {
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const name    = document.getElementById('name').value.trim();
-    const tel     = document.getElementById('c-tel').value.trim();
-    const type    = document.getElementById('projectType').value;
-    const message = document.getElementById('message').value.trim();
+
+    const name = document.getElementById('name').value.trim();
+    const tel = document.getElementById('c-tel').value.trim();
+    const type = document.getElementById('projectType').value;
+
+    const hour = new Date().getHours();
+    const greeting = (hour >= 5 && hour < 18) ? 'Bonjour' : 'Bonsoir';
+
+    let projectMessage = '';
+
+    switch (type) {
+      case 'Affiche / Design graphique':
+        projectMessage = 'souhaite réaliser une affiche ou un design graphique professionnel';
+        break;
+
+      case 'Identité visuelle':
+        projectMessage = 'souhaite créer une identité visuelle complète pour mon activité';
+        break;
+
+      case 'application-web':
+        projectMessage = 'souhaite développer une application web';
+        break;
+
+      case 'Application mobile':
+        projectMessage = 'souhaite développer une application mobile';
+        break;
+
+      case 'Site web':
+        projectMessage = 'souhaite créer un site web professionnel';
+        break;
+
+      case 'ecommerce':
+        projectMessage = 'souhaite créer une boutique en ligne';
+        break;
+
+      case 'portfolio':
+        projectMessage = 'souhaite créer un portfolio moderne et professionnel';
+        break;
+
+      case 'Autre':
+        projectMessage = 'souhaite discuter d’un projet personnalisé';
+        break;
+
+      default:
+        projectMessage = 'souhaite discuter d’un projet';
+    }
 
     const text = encodeURIComponent(
-      `*Bonjour Jonathan !*\n\n` +
-      `Je vous contacte depuis votre portfolio.\n\n` +
-      `*Nom :* ${name}\n` +
-      `*Numero :* ${tel}\n` +
-      `*Type de projet :* ${type || 'Non précisé'}\n\n` +
-      `*Message :*\n${message}`
+      `${greeting} Monsieur Jonathan,\n` +
+      `Je vous contacte depuis votre portfolio. Je m'appelle ${name}, mon numéro est le ${tel} et je ${projectMessage}.\n\n` +
+      `Merci.`
     );
 
     window.open(`https://wa.me/243821462002?text=${text}`, '_blank');
