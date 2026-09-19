@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jonathan Miangu - Designer & Développeur</title>
+  <title>Jonathan Miangu Olongo - Designer & Développeur</title>
+  <meta name="description" content="Portfolio de Jonathan Miangu Olongo - Designer graphique et développeur web & mobile. Affiches, apps Flutter/Kotlin, sites web." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg" />
+  <!-- Open Graph / Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nathan-olongo-portfolio.vercel.app/" />
+  <meta property="og:title" content="Jonathan Miangu Olongo - Designer & Développeur" />
+  <meta property="og:description" content="Je crée des visuels qui frappent et des applications qui fonctionnent. Design graphique, apps mobiles et sites web." />
+  <meta property="og:image" content="https://nathan-olongo-portfolio.vercel.app/assets/img/moi.png" />
+  <meta property="og:locale" content="fr_FR" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jonathan Miangu Olongo - Designer & Développeur" />
+  <meta name="twitter:description" content="Je crée des visuels qui frappent et des applications qui fonctionnent." />
+  <meta name="twitter:image" content="https://nathan-olongo-portfolio.vercel.app/assets/img/moi.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,20 +29,31 @@
 </head>
 <body>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursorTrail"></div>
+  <!-- Loading skeleton -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-skeleton">
+      <div class="sk-bar sk-title"></div>
+      <div class="sk-bar sk-sub"></div>
+      <div class="sk-grid">
+        <div class="sk-card"></div>
+        <div class="sk-card"></div>
+        <div class="sk-card"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-logo">
-      <img src="assets/img/mon_logo.png" alt="mon logo">
+      <a href="index.html"><img src="assets/img/mon_logo.png" alt="Logo Jonathan Miangu Olongo"></a>
     </div>
     <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#works">Réalisations</a></li>
       <li><a href="#tools">Outils</a></li>
-      <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+      <li><a href="contact.html" class="nav-cta">Me contacter</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -34,11 +62,12 @@
 
   <div class="mobile-menu" id="mobileMenu">
     <ul>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="#about" class="mobile-link">À propos</a></li>
       <li><a href="#services" class="mobile-link">Services</a></li>
       <li><a href="#works" class="mobile-link">Réalisations</a></li>
       <li><a href="#tools" class="mobile-link">Outils</a></li>
-      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact</a></li>
     </ul>
   </div>
 
@@ -53,8 +82,7 @@
       </h1>
       <p class="hero-tagline">Je crée des visuels qui frappent<br>et des applications qui fonctionnent.</p>
       <div class="hero-actions">
-        <a href="#works" class="btn btn-primary">Voir mes travaux</a>
-        <a href="#contact" class="btn btn-ghost">Travailler ensemble</a>
+        <a href="contact.html" class="btn btn-primary">Me contacter</a>
       </div>
     </div>
     <div class="hero-right">
@@ -92,7 +120,7 @@
             </div>
           </div>
         </div>
-        <div class="hero-badge"s>
+        <div class="hero-badge">
           <span class="badge-num">3</span>
           <span class="badge-text">expertises</span>
         </div>
@@ -108,7 +136,7 @@
       <div class="about-photo-area">
         <div class="photo-frame">
           <div class="photo-placeholder">
-            <img src="assets/img/moi.png" alt="ma photo">
+            <img src="assets/img/moi.png" alt="Photo de Jonathan Miangu Olongo">
           </div>
         </div>
       </div>
@@ -312,62 +340,7 @@
     </div>
   </section>
 
-
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="contact-wrap">
-        <div class="contact-left">
-          <p class="section-eyebrow">Discutons</p>
-          <h2 class="section-title">Vous avez un projet<span class="accent"> ?</span></h2>
-          <p class="contact-desc">Affiche, application mobile ou site web, je suis disponible pour en parler et vous proposer la meilleure approche.</p>
-          <div class="contact-info-list">
-            <a href="https://wa.me/243821462002" target="_blank" class="contact-info-item">
-              <div class="ci-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.858L.054 23.77a.5.5 0 00.617.617l5.898-1.476A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.513-5.228-1.406l-.375-.22-3.881.97.985-3.793-.236-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-              </div>
-              <span>+243821462002</span>
-            </a>
-            <a href="mailto:natholongo51@gmail.com" class="contact-info-item">
-              <div class="ci-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <span>natholongo51@gmail.com</span>
-            </a>
-          </div>
-        </div>
-        <div class="contact-right">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label>Nom complet</label>
-              <input type="text" id="name" placeholder="Votre nom" required />
-            </div>
-            <div class="form-group">
-              <label>Numero</label>
-              <input type="tel" id="c-tel" placeholder="+243 XXX XXX XXX" required>
-            </div>
-            <div class="form-group">
-              <label>Type de projet</label>
-              <select id="projectType">
-                <option value="">Choisir...</option>
-                <option value="Affiche / Design graphique">Affiche / Design graphique</option>
-                <option value="Identité visuelle">Identité visuelle</option>
-                <option value="application-web">Application web</option>
-                <option value="Application mobile">Application mobile</option>
-                <option value="Site web">Site web</option>;
-                <option value="ecommerce">Boutique en ligne</option>
-                <option value="portfolio">Portfolio</option>
-                <option value="Autre">Autre</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary full">Envoyer via WhatsApp</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- LIGHTBOX -->
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
     <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Image précédente">&#8249;</button>
@@ -395,5 +368,15 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // Hide loader when page is ready
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 400);
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page introuvable - Jonathan Miangu Olongo</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" type="image/png" href="assets/img/newlogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: var(--black);
+    }
+    .error-code {
+      font-family: var(--font-d);
+      font-size: clamp(6rem, 20vw, 12rem);
+      line-height: 1;
+      color: var(--red);
+      margin-bottom: 0.5rem;
+    }
+    .error-title {
+      font-family: var(--font-d);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+    .error-desc {
+      color: var(--white-dim);
+      max-width: 400px;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page introuvable</h1>
+    <p class="error-desc">La page que vous recherchez n'existe pas ou a été déplacée.</p>
+    <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+  </div>
+</body>
+</html>

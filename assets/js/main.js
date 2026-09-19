@@ -1,25 +1,4 @@
 /* ============================================
-   CURSOR
-============================================ */
-const cursor = document.getElementById('cursor');
-const trail  = document.getElementById('cursorTrail');
-let mx = 0, my = 0, tx = 0, ty = 0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px';
-  cursor.style.top  = my + 'px';
-});
-
-(function animTrail() {
-  tx += (mx - tx) * 0.13;
-  ty += (my - ty) * 0.13;
-  trail.style.left = tx + 'px';
-  trail.style.top  = ty + 'px';
-  requestAnimationFrame(animTrail);
-})();
-
-/* ============================================
    NAV SCROLL
 ============================================ */
 const nav = document.getElementById('nav');
@@ -97,7 +76,7 @@ filterBtns.forEach(btn => {
 });
 
 /* ============================================
-   CONTACT FORM — WhatsApp
+   CONTACT FORM — WhatsApp + validation + anti-spam
 ============================================ */
 const form = document.getElementById('contactForm');
 
@@ -105,9 +84,45 @@ if (form) {
   form.addEventListener('submit', e => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const tel = document.getElementById('c-tel').value.trim();
-    const type = document.getElementById('projectType').value;
+    // Anti-spam honeypot
+    const honeypot = document.getElementById('website');
+    if (honeypot && honeypot.value.trim() !== '') {
+      return; // bot detected
+    }
+
+    const nameEl = document.getElementById('name');
+    const telEl = document.getElementById('c-tel');
+    const typeEl = document.getElementById('projectType');
+
+    const name = nameEl.value.trim();
+    const tel = telEl.value.trim();
+    const type = typeEl.value;
+
+    // Validation
+    let valid = true;
+    if (name.length < 2) {
+      nameEl.setCustomValidity('Veuillez entrer un nom valide (2 caractères minimum).');
+      valid = false;
+    } else {
+      nameEl.setCustomValidity('');
+    }
+    if (!/^\+?[0-9\s\-]{8,15}$/.test(tel)) {
+      telEl.setCustomValidity('Veuillez entrer un numéro de téléphone valide.');
+      valid = false;
+    } else {
+      telEl.setCustomValidity('');
+    }
+    if (!type) {
+      typeEl.setCustomValidity('Veuillez choisir un type de projet.');
+      valid = false;
+    } else {
+      typeEl.setCustomValidity('');
+    }
+
+    if (!form.checkValidity() || !valid) {
+      form.reportValidity();
+      return;
+    }
 
     const hour = new Date().getHours();
     const greeting = (hour >= 5 && hour < 18) ? 'Bonjour' : 'Bonsoir';
