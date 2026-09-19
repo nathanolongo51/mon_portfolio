@@ -160,27 +160,94 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Mobile menu */
+/* Mobile menu — panneau latéral (pas plein écran) */
 .mobile-menu {
-  position: fixed; inset: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(85%, 340px);          /* prend seulement une partie de l’écran */
   background: #100000;
-  z-index: 9998; 
-  display: block;
-  padding: 6rem 2rem 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 5.5rem 1.75rem 2rem;
   transform: translateX(100%);
   transition: transform .4s var(--ease);
+  box-shadow: -8px 0 30px rgba(0,0,0,0.5);
+  overflow-y: auto;
 }
 .mobile-menu.open { transform: translateX(0); }
-.mobile-menu ul { list-style: none; text-align: center; }
+
+.mobile-menu ul {
+  list-style: none;
+  text-align: left;
+  flex: 1;
+}
 .mobile-menu a {
   font-family: var(--font-d);
-  font-size: 2.5rem;
-  letter-spacing: 0.05em;
+  font-size: 1.45rem;              /* taille réduite */
+  letter-spacing: 0.04em;
   display: block;
-  padding: 0.6rem 0;
+  padding: 0.7rem 0;
   transition: color .2s;
+  border-bottom: 1px solid rgba(245,245,245,0.06);
 }
 .mobile-menu a:hover { color: var(--red); }
 
+/* Infos de contact en bas du menu mobile */
+.mobile-menu-contact {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(204,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.mobile-menu-contact a,
+.mobile-menu-contact span {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-family: var(--font-b);
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  transition: color .2s;
+}
+.mobile-menu-contact a:hover { color: var(--red); }
+.mobile-menu-contact svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--red);
+}
+/* Bouton de fermeture (Croix) */
+.mobile-menu-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.mobile-menu-close:hover {
+  color: var(--red);
+  transform: rotate(90deg);
+}
 /* ============================================
    HERO
 ============================================ */
@@ -1019,6 +1086,11 @@ a { color: inherit; text-decoration: none; }
 
   /* Footer */
   .footer-inner { gap: 1rem; }
+
+  .mobile-menu a {
+    font-size: 1.3rem;
+    padding: 0.6rem 0;
+  }
 }
 
 /* ============================================

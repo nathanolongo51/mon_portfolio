@@ -44,15 +44,44 @@
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="index.html#about" class="mobile-link">À propos</a></li>
-      <li><a href="index.html#services" class="mobile-link">Services</a></li>
-      <li><a href="index.html#works" class="mobile-link">Réalisations</a></li>
-      <li><a href="index.html#tools" class="mobile-link">Outils</a></li>
-      </ul>
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Bouton de fermeture ajouté ici -->
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">&times;</button>
+
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="#about" class="mobile-link">À propos</a></li>
+    <li><a href="#services" class="mobile-link">Services</a></li>
+    <li><a href="#works" class="mobile-link">Réalisations</a></li>
+    <li><a href="#tools" class="mobile-link">Outils</a></li>
+    <li><a href="contact.html" class="mobile-link">Contact</a></li>
+  </ul>
+
+  <div class="mobile-menu-contact">
+    <a href="tel:+243815147352">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.15 6.15l1.27-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      +243 821 462 002
+    </a>
+
+    <a href="mailto:ton@email.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      natholongo51@gmail.com
+    </a>
+
+    <span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      Kinshasa - RDC
+    </span>
   </div>
+</div>
 
   <!-- CONTACT -->
   <section class="section contact" id="contact" style="padding-top: calc(var(--nav-h) + 4rem);">

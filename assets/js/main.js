@@ -9,10 +9,20 @@ window.addEventListener('scroll', () => {
 /* ============================================
    MOBILE MENU
 ============================================ */
-const toggle   = document.getElementById('navToggle');
-const mobileMenu = document.getElementById('mobileMenu');
+const toggle      = document.getElementById('navToggle');
+const closeBtn    = document.getElementById('mobileMenuClose'); // ← Ajouté
+const mobileMenu  = document.getElementById('mobileMenu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
+// Fonction utilitaire pour réinitialiser les barres du burger
+function resetBurger() {
+  toggle.querySelectorAll('span').forEach(s => { 
+    s.style.transform = ''; 
+    s.style.opacity = ''; 
+  });
+}
+
+// Ouverture / Fermeture via le bouton Burger
 toggle.addEventListener('click', () => {
   const open = mobileMenu.classList.toggle('open');
   const [s1, s2, s3] = toggle.querySelectorAll('span');
@@ -21,14 +31,22 @@ toggle.addEventListener('click', () => {
     s2.style.opacity = '0';
     s3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
   } else {
-    s1.style.transform = s3.style.transform = '';
-    s2.style.opacity = '';
+    resetBurger();
   }
 });
 
+// Fermeture via la Croix (mobileMenuClose)
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    resetBurger();
+  });
+}
+
+// Fermeture lors d'un clic sur un lien du menu
 mobileLinks.forEach(l => l.addEventListener('click', () => {
   mobileMenu.classList.remove('open');
-  toggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  resetBurger();
 }));
 
 /* ============================================
